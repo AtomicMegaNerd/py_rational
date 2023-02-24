@@ -27,25 +27,25 @@ class Rational:
             self.numer = abs(self.numer)
             self.denom = abs(self.denom)
 
-    def reciprocal(self) -> Self:
+    def reciprocal(self):
         return Rational(self.denom, self.numer)
 
     def __str__(self) -> str:
         return f"{self.numer}/{self.denom}"
 
-    def __add__(self, other: Self) -> Self:
-        l = Rational.lcm(self.denom, other.denom)
+    def __add__(self, other: Self):
+        lcm = Rational.lcm(self.denom, other.denom)
         return Rational(
-            (self.numer * l // self.denom) + (self.numer * l // other.denom), l
+            (self.numer * lcm // self.denom) + (self.numer * lcm // other.denom), lcm
         )
 
-    def __sub__(self, other: Self) -> Self:
-        l = Rational.lcm(self.denom, other.denom)
+    def __sub__(self, other: Self):
+        lcm = Rational.lcm(self.denom, other.denom)
         return Rational(
-            (self.numer * l // self.denom) - (self.numer * l // other.denom), l
+            (self.numer * lcm // self.denom) - (self.numer * lcm // other.denom), lcm
         )
 
-    def __mul__(self, other: Self) -> Self:
+    def __mul__(self, other: Self):
         return Rational(self.numer * other.numer, self.denom * other.denom)
 
     def __truediv__(self, other: Self) -> Self:
