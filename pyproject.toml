@@ -10,6 +10,13 @@ packages = [{include = "py_rational"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 
+[tool.poetry.group.dev.dependencies]
+mypy = "==1.0.1"
+black = "==23.1.0"
+
+[tool.mypy]
+strict = true
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

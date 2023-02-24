@@ -19,8 +19,6 @@
                 poetry
                 pyright
                 ruff
-                black
-                mypy
               ];
           };
     };
