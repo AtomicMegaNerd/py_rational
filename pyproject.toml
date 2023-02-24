@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "py-rational"
+version = "0.1.0"
+description = "Playing with Python for fun"
+authors = ["Chris Dunphy <chris@megaparsec.ca>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "py_rational"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "==0.0.252"
+ruff_lsp = "==0.0.19"
+mypy = "==1.0.1"
+black = "==23.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
