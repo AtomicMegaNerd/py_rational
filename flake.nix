@@ -22,7 +22,6 @@
                 poetry
                 pyright
                 ruff
-                python311Packages.ruff-lsp
               ];
           };
       });
