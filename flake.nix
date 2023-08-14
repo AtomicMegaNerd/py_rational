@@ -22,6 +22,8 @@
                 poetry
                 pyright
                 ruff
+                ruff-lsp
+                black
               ];
           };
       });
