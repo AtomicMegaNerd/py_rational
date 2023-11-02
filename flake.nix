@@ -23,7 +23,6 @@
                 pyright
                 ruff
                 ruff-lsp
-                black
               ];
           };
       });
