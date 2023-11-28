@@ -11,7 +11,7 @@ packages = [{include = "py_rational"}]
 python = "^3.11"
 
 [tool.poetry.group.dev.dependencies]
-mypy = "==1.6.1"
+mypy = "==1.7.1"
 pytest = "==7.4.3"
 
 [tool.mypy]
