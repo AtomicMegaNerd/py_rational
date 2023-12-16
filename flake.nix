@@ -18,7 +18,7 @@
             # The packages we need for this project
             buildInputs = with pkgs;
               [
-                python311
+                python312
                 poetry
                 pyright
                 ruff
