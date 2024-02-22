@@ -3,6 +3,10 @@ from typing import Any
 
 
 class Rational:
+    """
+    This class represents a rational number in Python.
+    """
+
     def __init__(self, numer: int, denom: int) -> None:
         self.numer = numer
         self.denom = denom
@@ -10,6 +14,9 @@ class Rational:
 
     @staticmethod
     def gcd(x: int, y: int) -> int:
+        """
+        This method returns the greatest common divisor of two integers.
+        """
         if y == 0:
             return x
         else:
@@ -17,9 +24,15 @@ class Rational:
 
     @staticmethod
     def lcm(x: int, y: int) -> int:
+        """
+        This method returns the least common multiple of two integers.
+        """
         return (x * y) // Rational.gcd(x, y)
 
     def reduce(self) -> None:
+        """
+        This method reduces the rational number to its lowest terms.
+        """
         gcd: int = Rational.gcd(self.numer, self.denom)
         self.numer = self.numer // gcd
         self.denom = self.denom // gcd
