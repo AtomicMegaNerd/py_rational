@@ -8,22 +8,11 @@
 
   outputs = { self, nixpkgs, flake-utils }:
     flake-utils.lib.eachDefaultSystem (system:
-      let
-        pkgs = nixpkgs.legacyPackages.${system};
-      in
-      {
-        devShell = pkgs.mkShell
-          pkgs.mkShell
-          {
-            # The packages we need for this project
-            buildInputs = with pkgs;
-              [
-                python312
-                poetry
-                pyright
-                ruff
-                ruff-lsp
-              ];
-          };
+      let pkgs = nixpkgs.legacyPackages.${system};
+      in {
+        devShell = pkgs.mkShell pkgs.mkShell {
+          # The packages we need for this project
+          buildInputs = with pkgs; [ python312 poetry pyright ruff ruff-lsp ];
+        };
       });
 }
