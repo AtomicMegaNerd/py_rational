@@ -12,7 +12,7 @@
       in {
         devShell = pkgs.mkShell pkgs.mkShell {
           # The packages we need for this project
-          buildInputs = with pkgs; [ python312 poetry pyright ruff ruff-lsp ];
+          buildInputs = with pkgs; [ python312 poetry pyright ruff ];
         };
       });
 }
