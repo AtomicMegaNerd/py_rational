@@ -10,7 +10,7 @@
     flake-utils.lib.eachDefaultSystem (system:
       let pkgs = nixpkgs.legacyPackages.${system};
       in {
-        devShell = pkgs.mkShell pkgs.mkShell {
+        devShell = pkgs.mkShell {
           # The packages we need for this project
           buildInputs = with pkgs; [ python312 poetry pyright ruff ];
         };
