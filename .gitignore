@@ -1,4 +1,3 @@
-**/__pycache__
-.venv
 .direnv
 .vscode
+**/__pycache__
